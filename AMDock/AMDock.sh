@@ -42,9 +42,10 @@ export PYTHONPATH=$PYTHONPATH:$AMDock_HOME
 OBABEL=`which obabel`
 PYMOL=`which pymol`
 PYMOL_PATH=${PYMOL_PATH:=`python2.7 -c "from imp import find_module; print find_module('pymol')[1]"`}
-PYMOL_DATA=${PYMOL_DATA:=/usr/share/pymol/data}
+PYMOL_DATA=${PYMOL_DATA:=${PYMOL_PATH}/pymol_path/data}
 PYMOL_SCRIPTS=${PYMOL_SCRIPTS:=/usr/share/pymol/scripts}
-CHEMPY_DATA=${CHEMPY_DATA:=/usr/share/pymol/data/chempy}
+CHEMPY_DATA=${CHEMPY_DATA:=${PYMOL_PATH}/pymol_path/data/chempy}
+
 
 export PYMOL_PATH
 export PYMOL_DATA
