@@ -2,11 +2,11 @@
 
 if [ -z "$SUDO_COMMAND" ]
 then
-    mntusr=$(id -u) grpusr=$(id -g) sudo $0 $*
+    echo "sudo not used, please prepend sudo...re-run with: sudo $0 $*"
     exit 0
 fi
-
-python module_checker.py
+# oh python2 required
+python2 module_checker.py
 if [ $? -ne 0 ]; then
     exit 0
 fi
